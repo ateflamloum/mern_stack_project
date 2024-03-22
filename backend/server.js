@@ -35,8 +35,8 @@ app.use("/api/v1/application", applicationRouter);
 // Database connection
 const mongoURI = process.env.MONGO_URI || 'mongodb+srv://ateflamloum:atefatefatef@atlascluster.gifoqjs.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClu';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
+    .then(() => {console.log('Connected to MongoDB')})
+    .catch(err => {console.error('Error connecting to MongoDB:', err)});
 dbConnection();
 
 // Cloudinary configuration
